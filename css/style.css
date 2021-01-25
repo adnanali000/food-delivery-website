@@ -1,7 +1,11 @@
-/* css reset  */
+    /* css reset  */
 *{
     padding: 0;
     margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* css variables  */
@@ -13,12 +17,15 @@
 #navbar{
     display: flex;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 #navbar::before{
     content: "";
     background-color: black;
     position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -39,6 +46,8 @@
 #navbar ul li{
     list-style: none;
     font-size: 1.2rem;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
 }
 #navbar ul li a{
     color: white;
@@ -53,3 +62,155 @@
     color: black;
 }
 
+/* section home  */
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 200px;
+     height: 550px;
+}
+#home::before{
+    content: "";
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height:642px;
+    opacity: 0.85;
+    
+}
+
+#home h1{
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
+#home p{
+    font-family: 'Teko', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* services section  */
+#services{
+    display: flex;
+    margin: 34px;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 3px 10px;
+    margin-bottom: 20px;
+    border-radius:28px;
+    background-color: #f2f2f2;
+}
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+
+/* client section  */
+#client-container{
+    /* height: 320px; */
+    position: relative;
+
+}
+#client-container::before{
+    content: "";
+    background: url('../images//bg2.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 120px;
+}
+.client-item{
+    padding: 34px;
+}
+
+/* contact section  */
+#contact-container{
+    position: relative;
+}
+#contact-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    background: url('../images/contact.jpg') no-repeat center center / cover;
+}
+#contact-box textarea,
+#contact-box input{
+
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box form{
+    width: 35%;
+}
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'Teko', sans-serif;
+
+}
+/* footer  */
+footer{
+    background-color: grey;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* utility classes  */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 15px;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+.h-secondary{
+    font-size: 2.2rem;
+    padding: 15px;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+.btn{
+    padding: 4px 18px;
+    border: 2px solid white;
+    background-color:grey;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin: 15px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+p{
+    font-family: 'Teko', sans-serif;
+
+}
